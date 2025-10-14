@@ -1,6 +1,7 @@
 import { serve } from "inngest/next";
 import { inngest } from "../../../inngest/client";
 import {
+  deleteCouponOnExpiration,
   syncUserCreation,
   syncUserDelete,
   syncUserUpdating,
@@ -15,5 +16,6 @@ export const { GET, POST, PUT } = serve({
     syncUserCreation,
     syncUserUpdating,
     syncUserDelete,
+    deleteCouponOnExpiration,
   ],
 });
