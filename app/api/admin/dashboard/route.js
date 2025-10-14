@@ -20,7 +20,7 @@ export async function GET(request) {
     const stores = await prisma.store.count();
 
     // get all orders include only createdAt & total & calculate total revenue
-    const allOrders = await prisma.findMany({
+    const allOrders = await prisma.order.findMany({
       select: {
         createdAt: true,
         total: true,
