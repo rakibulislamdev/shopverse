@@ -28,7 +28,7 @@ export async function POST(request) {
       !name ||
       !description ||
       !price ||
-      !images.length < 1 ||
+      images.length < 1 ||
       !mrp ||
       !category
     ) {
