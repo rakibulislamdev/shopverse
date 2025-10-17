@@ -4,6 +4,7 @@ import AddressModal from "./AddressModal";
 import { useSelector } from "react-redux";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
+import { Protect } from "@clerk/nextjs";
 
 const OrderSummary = ({ totalPrice, items }) => {
   const currency = process.env.NEXT_PUBLIC_CURRENCY_SYMBOL || "$";
@@ -110,7 +111,11 @@ const OrderSummary = ({ totalPrice, items }) => {
               {currency}
               {totalPrice.toLocaleString()}
             </p>
-            <p>Free</p>
+            <p>
+              <Protect plan="plus" fallback={`${currency}5`}>
+                Free
+              </Protect>
+            </p>
             {coupon && (
               <p>{`-${currency}${((coupon.discount / 100) * totalPrice).toFixed(
                 2
@@ -158,10 +163,24 @@ const OrderSummary = ({ totalPrice, items }) => {
       <div className="flex justify-between py-4">
         <p>Total:</p>
         <p className="font-medium text-right">
-          {currency}
-          {coupon
-            ? (totalPrice - (coupon.discount / 100) * totalPrice).toFixed(2)
-            : totalPrice.toLocaleString()}
+          <Protect
+            plan={"plus"}
+            fallback={`${currency}
+            ${
+              coupon
+                ? (
+                    totalPrice +
+                    5 -
+                    (coupon.discount / 100) * totalPrice
+                  ).toFixed(2)
+                : (totalPrice + 5).toLocaleString()
+            }`}
+          >
+            {currency}
+            {coupon
+              ? (totalPrice - (coupon.discount / 100) * totalPrice).toFixed(2)
+              : totalPrice.toLocaleString()}
+          </Protect>
         </p>
       </div>
       <button
