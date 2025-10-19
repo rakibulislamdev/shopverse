@@ -242,7 +242,7 @@ const OrderSummary = ({ totalPrice, items }) => {
       </div>
       <button
         onClick={(e) =>
-          toast.promise(handlePlaceOrder(e), { loading: "placing Order..." })
+          toast.promise(handlePlaceOrder(e), { loading: " Placing order..." })
         }
         className="w-full bg-slate-700 text-white py-2.5 rounded hover:bg-slate-900 active:scale-95 transition-all"
       >
