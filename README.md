@@ -4,6 +4,18 @@
 
 ---
 
+**Admin Email:**
+mageerauld+w46jp@gmail.com
+
+**Admin Pass:**
+secretPass123456789
+
+**For go to admin dashboard:**
+http://localhost:3000/admin
+
+**For go to store dashboard:**
+http://localhost:3000/store
+
 ## Features
 
 - **Multi-Vendor Architecture:** Allows multiple vendors to register, manage their own products, and sell on a single platform.
