@@ -1,5 +1,3 @@
-import gs_logo from "./gs_logo.jpg";
-import happy_store from "./happy_store.webp";
 import upload_area from "./upload_area.svg";
 import hero_model_img from "./Gemini_Generated_Image_deugd3deugd3deug-removebg-preview.png";
 import hero_product_img1 from "./hero_product_img1.png";
@@ -26,7 +24,6 @@ export const assets = {
   hero_model_img,
   hero_product_img1,
   hero_product_img2,
-  gs_logo,
   product_img1,
   product_img2,
   product_img3,
