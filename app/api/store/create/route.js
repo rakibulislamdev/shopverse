@@ -8,7 +8,11 @@ export async function POST(request) {
     const { userId } = getAuth(request);
     const formData = await request.formData();
     const name = formData.get("name");
-    const username = formData.get("username");
+    const username = formData
+      .get("username")
+      .toLowerCase()
+      .trim()
+      .replace(/\s+/g, "-");
     const description = formData.get("description");
     const email = formData.get("email");
     const contact = formData.get("contact");
@@ -50,7 +54,7 @@ export async function POST(request) {
 
     const isUserNameTaken = await prisma.store.findFirst({
       where: {
-        username: username.toLowerCase(),
+        username: username,
       },
     });
 
