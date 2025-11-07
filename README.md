@@ -1,11 +1,15 @@
 <div align="center">
   <h1>
-    <img src="https://raw.githubusercontent.com/rakibulislamdev/shopverse/refs/heads/main/app/favicon.ico" width="24" height="24" alt="Shopverse Favicon" />
+    <img src="https://raw.githubusercontent.com/rakibulislamdev/shopverse/refs/heads/main/app/favicon.ico" width="28" height="28" alt="Shopverse Favicon" />
     Shopverse
   </h1>
   <p>
     A complete <strong>AI-powered multi-vendor eCommerce platform</strong> built with <strong>Next.js</strong>, <strong>Tailwind CSS</strong>, and <strong>Redux Toolkit</strong>.
   </p>
+  
+  <a href="https://shopverse-fawn.vercel.app">
+    <img src="https://img.shields.io/badge/Live_Site-Visit_Now-00D991?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo Badge" />
+  </a>
 </div>
 
 ---
@@ -15,8 +19,9 @@
 **Admin Email:** `mageerauld+w46jp@gmail.com`  
 **Admin Password:** `secretPass123456789`
 
-> 🧭 **Admin Dashboard:** [http://localhost:3000/admin](http://localhost:3000/admin)  
-> 🏪 **Store Dashboard:** [http://localhost:3000/store](http://localhost:3000/store)
+> 🧭 **Admin Dashboard:** [https://shopverse-fawn.vercel.app/admin](https://shopverse-fawn.vercel.app/admin)  
+> 🏪 **Store Dashboard:** [https://shopverse-fawn.vercel.app/store](https://shopverse-fawn.vercel.app/store)  
+> 🌐 **Live Site:** [https://shopverse-fawn.vercel.app](https://shopverse-fawn.vercel.app)
 
 ---
 
@@ -71,6 +76,7 @@ First, install the dependencies:
 npm install
 
 Then, start the development server:
+
 npm run dev
 # or
 yarn dev
